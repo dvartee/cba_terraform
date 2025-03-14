@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-                checkout{{
+                checkout scm {{
                     $class: 'GITSON'
-                    branches: [[name: "*/main"]],
+                    branches: [[name: "*/master"]],
                     extensions: [],
                     userRemoteConfigs: [[
-                        url:https:'https://github.com/dvartee/Jenkins-repo.git'
+                        url:https:'https://github.com/dvartee/cba_terraform.git'
                     ]]
                 }}
             }
